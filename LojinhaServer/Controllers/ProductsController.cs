@@ -43,7 +43,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<IActionResult> Put(ProductsController product)
+    public async Task<IActionResult> Put(Product product)
     {
         var oldProduct = await _repo.GetByIdAsync(product.Id);
         if (oldProduct == null)
